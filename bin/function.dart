@@ -22,6 +22,14 @@ void sayHello6({required String firstName, String lastName = 'default'}) {
   print('Hello $firstName $lastName');
 }
 
+int sum(List<int> numbers) {
+  var total = 0;
+  for (var value in numbers) {
+    total += value;
+  }
+  return total;
+}
+
 void main() {
   // sayHello('Miftahul', 'Huda');
   // sayHello('Chandra', 'Martino');
@@ -37,4 +45,6 @@ void main() {
   sayHello6(firstName: 'Miftahul');
   // sayHello6(lastName: 'Huda');
   // sayHello6();
+  print(sum([15, 5, 20, 30, 5, 25]));
+  print(sum([10, 10, 10, 10, 10]));
 }
