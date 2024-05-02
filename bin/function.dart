@@ -22,7 +22,8 @@ void sayHello6({required String firstName, String lastName = 'default'}) {
   print('Hello $firstName $lastName');
 }
 
-void main() {
+int sum(int first, int second) => first + second;
+void main(List<String> args) {
   // sayHello('Miftahul', 'Huda');
   // sayHello('Chandra', 'Martino');
   // sayHello2('Miftahul', 'Huda');
@@ -37,4 +38,16 @@ void main() {
   sayHello6(firstName: 'Miftahul');
   // sayHello6(lastName: 'Huda');
   // sayHello6();
+  var perhitungan = sum(500, 200);
+  var perhitungan2 = sum(1500, 200);
+  print(perhitungan);
+  print(perhitungan2);
+  void sayHello() {
+    print('Inner Function');
+  }
+  
+  sayHello();
+  sayHello();
+
+  print('Arguments : $args');
 }
