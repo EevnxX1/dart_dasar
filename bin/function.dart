@@ -30,7 +30,9 @@ int sum(List<int> numbers) {
   return total;
 }
 
-void main() {
+int sum2(int first, int second) => first + second;
+
+void main(List<String> args) {
   // sayHello('Miftahul', 'Huda');
   // sayHello('Chandra', 'Martino');
   // sayHello2('Miftahul', 'Huda');
@@ -42,9 +44,21 @@ void main() {
   // sayHello4(firstName: 'Miftahul');
   // sayHello4(lastName: 'Huda');
   // sayHello4();
-  sayHello6(firstName: 'Miftahul');
+  // sayHello6(firstName: 'Miftahul');
   // sayHello6(lastName: 'Huda');
   // sayHello6();
   print(sum([15, 5, 20, 30, 5, 25]));
   print(sum([10, 10, 10, 10, 10]));
+  var perhitungan = sum2(500, 200);
+  var perhitungan2 = sum2(1500, 200);
+  print(perhitungan);
+  print(perhitungan2);
+  void sayHello() {
+    print('Inner Function');
+  }
+
+  sayHello();
+  sayHello();
+
+  print('Arguments : $args');
 }
