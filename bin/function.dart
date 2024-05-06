@@ -22,6 +22,14 @@ void sayHello6({required String firstName, String lastName = 'default'}) {
   print('Hello $firstName $lastName');
 }
 
+void sayHello7(String name, String Function(String) filter) {
+  var filteredName = filter(name);
+  print('Hi $filteredName');
+}
+
+
+
+
 int sum(int first, int second) => first + second;
 void main(List<String> args) {
   // sayHello('Miftahul', 'Huda');
