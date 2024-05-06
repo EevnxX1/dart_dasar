@@ -37,6 +37,19 @@ int sum(List<int> numbers) {
 
 int sum2(int first, int second) => first + second;
 
+void sayHello8(String name, String Function(String) filter) {
+  var filteredName = filter(name);
+  print('Hi, $filteredName');
+}
+
+String filterBadWord(String name) {
+  if(name == 'anjing') {
+    return '******';
+  } else {
+    return name;
+  }
+}
+
 void main(List<String> args) {
   // sayHello('Miftahul', 'Huda');
   // sayHello('Chandra', 'Martino');
@@ -66,4 +79,5 @@ void main(List<String> args) {
   sayHello();
 
   print('Arguments : $args');
+  sayHello8('anjing', filterBadWord);
 }
